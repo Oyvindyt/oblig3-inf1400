@@ -19,9 +19,9 @@ class Spaceship(pygame.sprite.Sprite):
         self.rotation = 0.0  # i radianer
         self.rocketOn = False
         self.shooting = False
+        self.grounded = True
+        self.bullets = []
         
-        # Is standing on ground. No gravity!
-        # self.grounded = True
 
     ''' Returnerer en retningsvektor for hvor skipet peker.'''
     def forward_dir(self):
@@ -38,10 +38,19 @@ class Spaceship(pygame.sprite.Sprite):
         if self.rocketOn:
             self.acceleration -= self.forward_dir() * self.BOOSTER_SPEED
 
+
     def shoot(self):
+
         if self.shooting:
             # TODO
             pass
+    
+    def health(self):
+        pass
+
+    def avoid_obstacle(self):
+        # TODO
+        pass
 
 
 
